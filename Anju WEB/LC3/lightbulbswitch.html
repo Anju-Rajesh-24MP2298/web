@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Background color changer</title>
+		<style>
+			body{
+				font-family:arial,sans-serif;
+				display:flex;
+				flex-direction:column;
+				justify-color:center;
+				align-items:center;
+			}
+			button{
+				padding:10px 20px;
+				font-size:16px;
+				margin:10px;
+			}
+			img{
+				width:200px;
+				margin-button:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="lightbulb" src="/home/web/Anju WEB/pic/lightbulb.png" alt="Light Bulb">
+		<div>
+			<button id="turnon">TURN ON</button>
+			<button id="turnoff">TURN OFF</button>
+		</div>
+		<script>
+			const lightbulb=document.getElementById("lightbulb");
+			function turnon()
+			{
+				lightbulb.src="/home/web/Anju WEB/pic/onbulb.png" ;
+			}
+			function turnoff()
+			{
+				lightbulb.src="/home/web/Anju WEB/pic/offbulb.png" ;
+			}
+			document.getElementById("turnon").addEventListener("click",turnon);
+			document.getElementById("turnoff").addEventListener("click",turnoff);
+		</script>
+	</body>
+</html>
