@@ -1,32 +1,83 @@
-<html >
+<html>
 <head>
     <title>Student Registration</title>
+    <style>
+        table {
+            border: 2px solid #000;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="radio"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            width: auto;
+        }
+        input[type="submit"] {
+            background-color: grey;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: gainsboro;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h2>Register Student</h2>
-    <form method="POST" action="registration.php">
-        <label for="first_name">First Name:</label><br>
-        <input type="text" id="first_name" name="first_name" required><br><br>
-
-        <label for="last_name">Last Name:</label><br>
-        <input type="text" id="last_name" name="last_name" required><br><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="dob">Date of Birth:</label><br>
-        <input type="date" id="dob" name="dob" required><br><br>
-
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="Male" required>
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="Female" required>
-        <label for="female">Female</label><br><br>
-
-        <label for="mobile_number">Mobile Number:</label><br>
-        <input type="text" id="mobile_number" name="mobile_number" required><br><br>
-
-        <input type="submit" value="Register">
+    <form method="POST" action="registration2.php">
+        <table>
+            <tr>
+                <td><label for="first_name">First Name:</label></td>
+                <td><input type="text" id="first_name" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="last_name">Last Name:</label></td>
+                <td><input type="text" id="last_name" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male" required> Male
+                    <input type="radio" id="female" name="gender" value="Female" required> Female
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mobile_number">Mobile Number:</label></td>
+                <td><input type="text" id="mobile_number" name="mobile_number" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
